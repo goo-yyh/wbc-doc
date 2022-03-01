@@ -1,5 +1,3 @@
-import config from '/config.json';
-
 export const renderNav = function () {
   const html = `
     <div class="doc-nav-bar__name">
