@@ -1,7 +1,7 @@
 export const renderNav = function () {
   const html = `
     <div class="doc-nav-bar__name">
-      <img src="/logo.png" height="40" alt="">
+      <img src="/public/logo.png" height="40" alt="">
     </div>
     <div class="doc-nav-bar__action">
       actions 

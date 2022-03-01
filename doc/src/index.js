@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import { renderMenu } from "./components/menu";
 import { renderNav } from "./components/nav-bar";
 

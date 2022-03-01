@@ -1,9 +1,12 @@
 import config from '/config.json';
-import { renderCodeBlock } from "../render/renderCodeBlock";
+import { renderComponent } from "../render/renderComponent";
+import { MenuType } from "../constant";
 
 const itemMap = {};
+const componentMap = {};
 let activeItem = null;
 
+// 一级菜单
 const renderTitle = function(name) {
   const div = document.createElement('div');
   div.className = 'doc-menu__group-title';
@@ -11,12 +14,21 @@ const renderTitle = function(name) {
   return div;
 }
 
+// 二级菜单
 const renderItem = function (name, type, href) {
   let h;
-  if (type === 'component') {
+  if (type === MenuType.COMPONENT) {
     h = '#/component/' + href;
+    componentMap[h] = {
+      type: MenuType.COMPONENT,
+      name: href
+    };
   } else {
     h = '#/' + href;
+    componentMap[h] = {
+      type: MenuType.GUIDE,
+      name: href
+    };
   }
   const a = document.createElement('a');
   a.href = h;
@@ -28,6 +40,7 @@ const renderItem = function (name, type, href) {
   return div;
 }
 
+// 开发指南menu
 const renderGuideGroup = function (guide) {
   const div = document.createElement('div');
   div.className = 'doc-menu__group';
@@ -35,12 +48,13 @@ const renderGuideGroup = function (guide) {
   const title = renderTitle('开发指南');
   div.appendChild(title);
   guide.map(({ name, href }) => {
-    div.appendChild(renderItem(name, 'guide', href));
+    div.appendChild(renderItem(name, MenuType.GUIDE, href));
   })
 
   return div;
 }
 
+// 组件menu
 const renderComponentGroup = function (componentsGroup) {
   const frag = document.createDocumentFragment();
 
@@ -51,7 +65,9 @@ const renderComponentGroup = function (componentsGroup) {
     const title = renderTitle(name);
     div.appendChild(title);
     for (let com of components) {
-      div.appendChild(renderItem(com, 'component', com));
+      const { name, label } = com;
+      const title = name + ' ' + label;
+      div.appendChild(renderItem(title, MenuType.COMPONENT, com.name));
     }
 
     frag.appendChild(div);
@@ -59,6 +75,7 @@ const renderComponentGroup = function (componentsGroup) {
   return frag;
 }
 
+// 路由change触发
 const menuChange = function () {
   const hash = location.hash.split('?')[0];
   if (!hash) {
@@ -71,12 +88,14 @@ const menuChange = function () {
     a.classList.add('active');
     activeItem = a;
 
-    renderCodeBlock();
+    // 路由改变时修改渲染的内容
+    renderComponent(componentMap[hash]);
   } else {
     location.href = '#/guide';
   }
 }
 
+// 绑定路由事件
 const bindMenuRouterChange = function () {
   window.removeEventListener('hashchange', menuChange);
   window.removeEventListener('load', menuChange);
@@ -84,6 +103,7 @@ const bindMenuRouterChange = function () {
   window.addEventListener('load', menuChange);
 }
 
+// 渲染menu
 export const renderMenu = function () {
   const { guide, components } = config;
   const div = document.createElement('div');

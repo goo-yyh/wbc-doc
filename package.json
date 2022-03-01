@@ -25,12 +25,14 @@
   "homepage": "https://github.com/goo-yyh/wbc-doc#readme",
   "devDependencies": {
     "css-loader": "^6.6.0",
+    "highlight.js": "^11.4.0",
     "html-webpack-plugin": "^5.5.0",
+    "remarkable": "^2.0.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4",
-    "highlight.js": "^11.4.0",
-    "remarkable": "^2.0.1"
+    "webpack-dev-server": "^4.7.4"
   }
 }

@@ -8,7 +8,6 @@ export const renderMD = function () {
       return res.text();
     })
     .then(res => {
-      console.log('res', mdRender.render(res));
       div.innerHTML = mdRender.render(res);
     });
   return div;

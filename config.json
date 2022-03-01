@@ -15,19 +15,26 @@
       "href": "question"
     }
   ],
+  "componentsUrl": "./src/components",
   "components": [
     {
       "type": "basic",
       "name": "基础",
       "components": [
-        "button"
+        {
+          "name": "button",
+          "label": "按钮"
+        }
       ]
     },
     {
       "type": "form",
       "name": "表单",
       "components": [
-        "input"
+        {
+          "name": "input",
+          "label": "输入框"
+        }
       ]
     }
   ]
