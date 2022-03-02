@@ -1,9 +1,9 @@
 import { mdRender } from "./mdRender";
 
-export const renderMD = function () {
+export const renderMD = function (url) {
   const div = document.createElement('div');
   div.className = 'doc-content__readme';
-  fetch('/src/component/button/README.md')
+  fetch(url)
     .then(res => {
       return res.text();
     })

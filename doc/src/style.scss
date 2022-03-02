@@ -130,6 +130,10 @@ a {
     flex-direction: row;
     height: 700px;
     border: 1px solid #ebedf1;
+
+    & + & {
+      margin-top: 32px;
+    }
   }
 
   &__readme {

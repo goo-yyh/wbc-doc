@@ -1,6 +1,5 @@
 {
   "name": "wbc-doc",
-  "icon": "",
   "guide": [
     {
       "name": "指南",
@@ -15,7 +14,9 @@
       "href": "question"
     }
   ],
-  "componentsUrl": "./src/components",
+  "componentsPath": "./src/components",
+  "demoDir": "demos",
+  "devDir": "dev",
   "components": [
     {
       "type": "basic",
