@@ -3,5 +3,5 @@
 ```
 
 ```javascript
-console.log(1111111222223334444)
+console.log(11111)
 ```
