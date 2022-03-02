@@ -22,6 +22,8 @@ module.exports = {
     ignored: [
       '**/demo-config.json',
       '**/node_modules',
+      '**/.idea',
+      '**/.vscode',
       `${srcPath}/**/*.js`,
       `${srcPath}/**/*.ts`,
       `${srcPath}/**/*.json`,
