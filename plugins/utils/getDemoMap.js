@@ -14,14 +14,18 @@ const getDemoMap = function () {
     const demoFilePath = path.join(url, component, demoPath);
     const devFilePath = path.join(url, component, devPath);
     const demoToDev = {};
-    fs.readdirSync(demoFilePath).forEach(md => {
-      const mdPath = path.join(demoFilePath, md);
-      const html = md.split('.md')[0] + '.html';
-      const htmlPath = path.join(devFilePath, html);
+    try {
+      fs.readdirSync(demoFilePath).forEach(md => {
+        const mdPath = path.join(demoFilePath, md);
+        const html = md.split('.md')[0] + '.html';
+        const htmlPath = path.join(devFilePath, html);
 
-      demoToDev[mdPath] = htmlPath;
-      demoMap[component] = demoToDev;
-    })
+        demoToDev[mdPath] = htmlPath;
+        demoMap[component] = demoToDev;
+      })
+    } catch (err) {
+
+    }
   })
 
   fs.writeFileSync(demoConfigPath, JSON.stringify(demoMap));
