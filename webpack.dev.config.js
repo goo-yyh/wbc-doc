@@ -24,6 +24,7 @@ module.exports = {
       '**/node_modules',
       '**/.idea',
       '**/.vscode',
+      '**/.git',
       `${srcPath}/**/*.js`,
       `${srcPath}/**/*.ts`,
       `${srcPath}/**/*.json`,
