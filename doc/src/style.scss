@@ -31,6 +31,75 @@ a {
       vertical-align: middle;
     }
   }
+
+  .search-input {
+    display: inline-block;
+    position: relative;
+
+    &__input {
+      width: 200px;
+      height: 32px;
+      box-sizing: border-box;
+      padding: 0 38px 0 14px;
+      color: #454d64;
+      font-size: 14px;
+      outline: none;
+      transition: all .2s;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      background: url(/public/search-icon.png) #f5f6f7 no-repeat right 14px center/16px;;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      &:focus {
+        border-color: #1677ff;
+        background-color: #fff;
+      }
+    }
+
+    &__menu {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 10;
+      margin: 8px 0 0;
+      min-width: 280px;
+      max-width: 400px;
+      max-height: 230px;
+      padding: 6px 0;
+      background-color: #fff;
+      border: 1px solid #ebedf1;
+      border-radius: 1px;
+      box-shadow: 0 2px 20px 0 rgb(0 0 0 / 5%);
+      box-sizing: border-box;
+      overflow-y: auto;
+      display: none;
+
+      a, p {
+        display: block;
+        padding: 6px 20px;
+        color: #717484;
+        text-decoration: none;
+        line-height: 1.5715;
+        transition: background-color .3s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .select-txt {
+          color: #736b2d;
+          background: #fff9cb;
+        }
+      }
+
+      a:hover {
+        color: #1677ff;
+        background-color: #f5f7fa;
+      }
+    }
+  }
 }
 
 .doc-menu-content {

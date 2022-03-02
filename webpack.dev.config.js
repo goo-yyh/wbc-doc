@@ -25,6 +25,7 @@ module.exports = {
       `${srcPath}/**/*.js`,
       `${srcPath}/**/*.ts`,
       `${srcPath}/**/*.json`,
+      `${srcPath}/**/*.html`,
     ],
   },
 }

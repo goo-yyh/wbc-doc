@@ -1,11 +1,12 @@
 const renderMap = {
   guide: renderGuideIndex,
   plan: renderGuidePlan,
-  question: renderGuideQuestion
+  question: renderGuideQuestion,
+  default: renderDefaultPage
 };
 
 export const renderGuide = function (name) {
-  const fun = renderMap[name];
+  const fun = renderMap[name] || renderMap.default;
   const div = document.querySelector('.doc-content');
   fun(div);
 }
@@ -25,5 +26,11 @@ function renderGuidePlan (main) {
 function renderGuideQuestion (main) {
   main.innerHTML = `
     <h1>常见问题</h1>
+  `
+}
+
+function renderDefaultPage (main) {
+  main.innerHTML = `
+    <h1>没有设置该页面内容~</h1>
   `
 }

@@ -12,7 +12,7 @@ export const renderComponent = function (hash) {
       .then(res => {
         const config = res[name];
         renderCodeBlock(config, name);
-        console.log('this is compon111ent111', name, config);
+        console.log('this is component render', name, config);
       });
     return;
   }
