@@ -1,7 +1,7 @@
 # wbc-doc
 用于 web-component 的移动端 doc 生成
 
-![img.png](img.png)
+<img src="http://img.gbyyh.com/img.png">
 
 ## config.json 配置说明
 
