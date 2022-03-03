@@ -17,8 +17,8 @@ const getDemoMap = function () {
     try {
       fs.readdirSync(demoFilePath).forEach(md => {
         const mdPath = path.join(demoFilePath, md);
-        const html = md.split('.md')[0] + '.html';
-        const htmlPath = path.join(devFilePath, html);
+        const html = md.split('.md')[0];
+        const htmlPath = path.join(devFilePath, html).slice(4);
 
         demoToDev[mdPath] = htmlPath;
         demoMap[component] = demoToDev;

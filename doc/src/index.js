@@ -6,7 +6,7 @@ import { renderNav } from "./components/nav-bar";
 function importAll(r) {
   r.keys().forEach(r);
 }
-importAll(require.context('../../src/', true, /\.justforwatch$/));
+importAll(require.context('../../src/', true, /\.vue$/));
 
 const init = function () {
   renderNav();
