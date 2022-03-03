@@ -1,0 +1,42 @@
+{
+  "name": "wbc-doc",
+  "guide": [
+    {
+      "name": "指南",
+      "href": "guide"
+    },
+    {
+      "name": "迭代计划",
+      "href": "plan"
+    },
+    {
+      "name": "常见问题",
+      "href": "question"
+    }
+  ],
+  "componentsPath": "./src/components",
+  "demoDir": "demos",
+  "devDir": "dev",
+  "components": [
+    {
+      "type": "basic",
+      "name": "基础",
+      "components": [
+        {
+          "name": "button",
+          "label": "按钮"
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "name": "表单",
+      "components": [
+        {
+          "name": "input",
+          "label": "输入框"
+        }
+      ]
+    }
+  ]
+}

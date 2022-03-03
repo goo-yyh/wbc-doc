@@ -8,7 +8,24 @@ module.exports = {
   ...basic,
   mode: "development",
   devServer: {
-    static: './',
+    static: [
+      {
+        directory: path.join(__dirname, './dist'),
+      },
+      {
+        directory: path.join(__dirname, './src'),
+        publicPath: '/src',
+        watch: false
+      },
+      {
+        directory: path.join(__dirname, './public'),
+        publicPath: '/public',
+      },
+      {
+        directory: path.join(__dirname, './doc'),
+        publicPath: '/doc',
+      },
+    ],
     port: 9000,
   },
   plugins: [
@@ -24,11 +41,9 @@ module.exports = {
       '**/node_modules',
       '**/.idea',
       '**/.vscode',
-      '**/.git',
       `${srcPath}/**/*.js`,
       `${srcPath}/**/*.ts`,
       `${srcPath}/**/*.json`,
-      `${srcPath}/**/*.html`,
     ],
   },
 }

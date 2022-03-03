@@ -3,7 +3,7 @@
 
 <img src="http://img.gbyyh.com/img.png">
 
-## config.json 配置说明
+## doc中 config.json 配置说明
 
 | 名字           | 描述         |
 | -------------- | ------------------- |

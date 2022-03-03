@@ -1,7 +1,7 @@
 import { renderDevice } from "./renderDevice";
 import { renderCode } from "./renderCode";
 import { renderMD } from "./renderMD";
-import config from '../../../config.json';
+import config from '/doc/config.json';
 
 export const renderCodeBlock = function (map, componentName) {
   const mds = Object.keys(map);

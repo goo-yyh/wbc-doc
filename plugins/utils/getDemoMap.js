@@ -1,11 +1,11 @@
 const fs = require('fs');
-const config = require('../../config.json');
+const config = require('../../doc/config.json');
 const path = require('path');
 
 const url = config.componentsPath;
 const demoPath = config.demoDir || 'demos';
 const devPath = config.devDir || 'dev';
-const demoConfigPath = './demo-config.json';
+const demoConfigPath = './doc/demo-config.json';
 
 const getDemoMap = function () {
   const demoMap = {};

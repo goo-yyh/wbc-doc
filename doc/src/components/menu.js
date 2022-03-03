@@ -1,4 +1,4 @@
-import config from '/config.json';
+import config from '/doc/config.json';
 import { renderComponent } from "../render/renderComponent";
 import { MenuType } from "../constant";
 
