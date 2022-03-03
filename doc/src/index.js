@@ -7,7 +7,6 @@ function importAll(r) {
   r.keys().forEach(r);
 }
 importAll(require.context('../../src/', true, /\.justforwatch$/));
-importAll(require.context('../../src/', true, /\.justforwatch$/));
 
 const init = function () {
   renderNav();

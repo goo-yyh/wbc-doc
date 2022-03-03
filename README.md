@@ -19,6 +19,8 @@
 npm install
 npm run dev
 
+http://localhost:9000/
+
 ## 自定义
 
 方法都写在 doc/src 中，因为功能不多，而且是自用，所以代码比较简单，修改起来应该也很方便。

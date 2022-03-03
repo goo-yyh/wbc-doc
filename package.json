@@ -8,7 +8,7 @@
   },
   "scripts": {
     "watch": "webpack --watch",
-    "dev": "webpack serve --config webpack.dev.config.js --open",
+    "dev": "webpack serve --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js"
   },
   "repository": {
