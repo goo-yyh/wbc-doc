@@ -1,7 +1,7 @@
 # wbc-doc
 用于 web-component 的移动端 doc 生成
 
-<img src="http://img.gbyyh.com/img.png">
+<img alt="" src="http://img.gbyyh.com/img.png">
 
 ## doc中 config.json 配置说明
 
@@ -27,7 +27,6 @@ http://localhost:9000/
 
 讲道理应该是没有框架限制的，只要经过合适的编译，通过js引入html中，所有框架都是可以实现的。
 
-如果不想要用iframe的形式通过引入html形式展示组件，而是用框架代码，思路很简单，因为device的className是确定的，肯定能找到它，
-用每个框架自己的渲染方法render进去就好了，感觉麻烦的是在编译这一步。
+已经支持vue组件，可以查看vue分支。
 
-因为现在自己没有这个需求，如果有的话，后续再想想办法，加上不同框架的适配。
+react暂未支持
