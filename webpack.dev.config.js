@@ -3,7 +3,6 @@ const WebpackDemoPlugin = require('./plugins/webpack-demo-dev-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require('path');
 const srcPath = path.posix.resolve(__dirname, './src');
-const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   ...basic,
@@ -33,8 +32,7 @@ module.exports = {
     new WebpackDemoPlugin(),
     new HtmlWebpackPlugin({
       template: "./public/index.html"
-    }),
-    new VueLoaderPlugin()
+    })
   ],
   watchOptions: {
     aggregateTimeout: 500,

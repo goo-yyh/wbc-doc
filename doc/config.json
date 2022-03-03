@@ -1,6 +1,6 @@
 {
   "name": "wbc-doc",
-  "type": "vue",
+  "type": "react",
   "guide": [
     {
       "name": "指南",
@@ -17,7 +17,7 @@
   ],
   "componentsPath": "./src/components",
   "demoDir": "demos",
-  "devDir": "vue-dev",
+  "devDir": "react-dev",
   "components": [
     {
       "type": "basic",

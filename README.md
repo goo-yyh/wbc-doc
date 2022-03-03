@@ -23,7 +23,7 @@ http://localhost:9000/
 
 ## 自定义
 
-支持Vue的组件定义。
+支持React的组件定义,只做了jsx的，ts需要自己加配置支持,js的话,修改doc/render/renderDevice中的jsx后缀即可。
 
 暂时只做了最基本的实现，后续还有问题可以提issue。
 
