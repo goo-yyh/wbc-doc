@@ -1,4 +1,4 @@
-import config from '/config.json';
+import config from '/doc/config.json';
 
 const componentList = config.components.reduce((list, next) => {
   const coms = next.components || [];

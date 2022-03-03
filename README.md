@@ -3,7 +3,7 @@
 
 <img src="http://img.gbyyh.com/img.png">
 
-## config.json 配置说明
+## doc中 config.json 配置说明
 
 | 名字           | 描述         |
 | -------------- | ------------------- |
@@ -18,6 +18,8 @@
 
 npm install
 npm run dev
+
+http://localhost:9000/
 
 ## 自定义
 

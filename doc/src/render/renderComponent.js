@@ -7,7 +7,7 @@ export const renderComponent = function (hash) {
   const div = document.querySelector('.doc-content');
   div.innerHTML = '';
   if (type === MenuType.COMPONENT) {
-    fetch('../../../demo-config.json')
+    fetch('/doc/demo-config.json')
       .then(res => res.json())
       .then(res => {
         const config = res[name];
