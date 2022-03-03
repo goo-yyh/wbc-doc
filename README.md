@@ -29,4 +29,4 @@ http://localhost:9000/
 
 已经支持vue组件，可以查看vue分支。
 
-react暂未支持
+已经支持react组件，可以查看react分支
